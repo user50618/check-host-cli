@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/) [![Requests Library](https://img.shields.io/badge/requests-2.25%2B-green.svg)](https://docs.python-requests.org/) [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![GitHub Stars](https://img.shields.io/badge/stars-⭐-yellow.svg)]()
+[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/) [![Requests Library](https://img.shields.io/badge/requests-2.25%2B-green.svg)](https://docs.python-requests.org/) [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![GitHub Stars](https://img.shields.io/badge/stars-⭐-yellow.svg)](https://github.com/mehdirzfx/check-host-cli/stargazers)
 
 **یک ابزار خط فرمان قدرتمند و کاربرپسند برای بررسی میزبان‌ها با استفاده از API سرویس check-host.net**
 
